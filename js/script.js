@@ -1,14 +1,24 @@
 "use strict"; 
-/* 
-const result = confirm("Are you loh?"); 
-console.log(result);  */
 
-/* const answer = prompt("Are you pidor?", "yes I am"); 
-console.log(answer); */
+const numberOfFilms = +prompt("Сколько фильмов вы уже просмотрели?"); 
 
-const answers = []; 
-answers[0] = prompt("Who is loh?", ""); 
-answers[1] = prompt("Who is pidor?", ""); 
-answers[2] = prompt("Who are you?", ""); 
+const personalMovieDB =  { 
+    count: numberOfFilms, 
+    movies: {}, 
+    actors:{}, 
+    genres:[], 
+    privat: false 
 
-document.write(answers); 
+}; 
+
+const a = prompt("Один из последних просмотренных фильмов", ""),
+         b = prompt("На сколько оцените его?", ""),
+         c = prompt("Один из последних просмотренных фильмов", ""), 
+         d = prompt("На сколько оцените его?", ""); 
+
+personalMovieDB.movies[a] = b; 
+personalMovieDB.movies[c] = d; 
+
+console.log(personalMovieDB); 
+
+
